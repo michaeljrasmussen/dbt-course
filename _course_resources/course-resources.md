@@ -916,7 +916,7 @@ Add `grants` to `dbt_project.yml`:
 ```
 models:
   airbnb:
-    grants:
+    +grants:
       select: ["transform", "reporter"]
 ```
 
