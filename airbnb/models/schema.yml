@@ -44,11 +44,21 @@ models:
           enforced: true
     columns:
       - name: host_id
+        description: The id of the host. This is the primary key.
+        tests:
+          - not_null
+          - unique
         data_type: integer
       - name: host_name
+        description: The name of the host
+        tests:
+          - not_null
         data_type: string
       - name: is_superhost
-        data_type: string
+        description: Defines whether the hosts is a superhost.
+        tests:
+          - accepted_values:
+              values: ['t', 'f']
       - name: updated_at
         data_type: timestamp
       - name: created_at
