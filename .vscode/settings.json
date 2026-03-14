@@ -1,5 +1,7 @@
 {
     "sqlfluff.excludeRules": [
-        "LT05"
+        "LT05",
+        "LT02",
+        ""
     ]
 }
